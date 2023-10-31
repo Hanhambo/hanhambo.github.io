@@ -2,55 +2,146 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.cdnfonts.com/css/public-pixel" rel="stylesheet">
+    <script src="index.js"></script>
     <title>My Project</title>
 </head>
 <body>
     
-    <div class="header">My Learning Record...</div>
-
-    <div class="card-section">
-        <div class="card-header">
-            <div class="name">Hanning</div>
-            <div class="timeCode">2023.10.30</div>
+    <div class="root">
+        <div class="header">My Learning Record...</div>
+        <div class="nav">
+            <div class="nav-item" onclick="showDiary();">日記</div>
+            <div class="nav-item" onclick="showJS30();">JS30</div>
         </div>
 
-        <div class="p-section">
-            <div class="p-header">1. 目前上完的課程：</div>
-            <strong>彭彭老師(台大資訊系統訓練班)</strong><br>
-            - JavaScript 網頁入門 - Html / Css / JavaScript基礎<br>
-            - JavaScript 網頁實務 - Webpack / React / Next.js<br>
+        <div class="diary">
+
+            <!-- 2023.10.31 -->
+            <div class="card-section">
+                <div class="card-header">
+                    <div class="name">Hanning</div>
+                    <div class="timeCode">2023.10.31</div>
+                </div>
+
+                <div class="p-section">
+                    <div class="p-header">1. 今天看的資源：</div>
+                    JS30 Day1 : Drum Kit<br>
+                </div>
+
+                <div class="p-section">
+                    <div class="p-header">2. 今日行動：</div>
+                    a. 成功把 JS30 Day1 寫出來<br>
+                    b. 把 JS30 專案加入此網頁中，但部分功能失效，同樣的程式碼在這裡跑不出來<br>
+                    c. 把 JS30 變成一個區塊，和日記分開展示，但使用老師之前教過的，轉換 className 方法失敗<br>
+                </div>
+
+                <div class="p-section">
+                    <div class="p-header">3. 卡關處：</div>
+                    a. 無法使用 removeTransition 功能<br>
+                    b. className 無法透過 function 轉換
+                </div>
+            </div>
+            
+            <!-- 2023.10.30 -->
+            <div class="card-section">
+                <div class="card-header">
+                    <div class="name">Hanning</div>
+                    <div class="timeCode">2023.10.30</div>
+                </div>
+
+                <div class="p-section">
+                    <div class="p-header">1. 目前上完的課程：</div>
+                    <strong>彭彭老師(台大資訊系統訓練班)</strong><br>
+                    - JavaScript 網頁入門 - Html / Css / JavaScript基礎<br>
+                    - JavaScript 網頁實務 - Webpack / React / Next.js<br>
+                </div>
+
+                <div class="p-section">
+                    <div class="p-header">2. 今天看的資源：</div>
+                    <a href="https://ithelp.ithome.com.tw/users/20162644/ironman/6495" target="_blank">
+                        it邦幫忙：前端轉職人生
+                    </a><br>
+                    <a href="https://youtu.be/8pDqJVdNa44?si=E3cDzOORL_n6Qt2W" target="_blank">
+                        React 紀錄片
+                    </a><br>
+                </div>
+
+                <div class="p-section">
+                    <div class="p-header">3. 今日行動：</div>
+                    撰寫本網頁<br>
+                    a. 網頁基本 layout (html/css)<br>
+                    b. 使用 Github Pages 來 demo<br>
+                    <hr>
+                    狀況排解<br>
+                    a. <a href="https://pages.github.com" target="_blank">
+                        Github Pages setup
+                    </a><br>
+                    b. <a href="https://zlargon.gitbooks.io/git-tutorial/content/file/rename.html" target="_blank">
+                        Git指令：rename file
+                    </a><br>
+                    c. 線上版本和本地版本有更新差異導致衝突，檔案無法push上去<br>
+                    <a href="https://zlargon.gitbooks.io/git-tutorial/content/file/rename.html" target="_blank">
+                        Git指令：git pull --rebase
+                    </a><br>
+                </div>
+            </div>
+
         </div>
 
-        <div class="p-section">
-            <div class="p-header">2. 今天看的資源：</div>
-            <a href="https://ithelp.ithome.com.tw/users/20162644/ironman/6495" target="_blank">
-                it邦幫忙：前端轉職人生
-            </a><br>
-            <a href="https://youtu.be/8pDqJVdNa44?si=E3cDzOORL_n6Qt2W" target="_blank">
-                React 紀錄片
-            </a><br>
-        </div>
-
-        <div class="p-section">
-            <div class="p-header">3. 今日行動：</div>
-            撰寫本網頁<br>
-            a. 網頁基本 layout (html/css)<br>
-            b. 使用 Github Pages 來 demo<br>
-            <hr>
-            狀況排解<br>
-            a. <a href="https://pages.github.com" target="_blank">
-                Github Pages setup
-            </a><br>
-            b. <a href="https://zlargon.gitbooks.io/git-tutorial/content/file/rename.html" target="_blank">
-                Git指令：rename file
-            </a><br>
-            c. 線上版本和本地版本有更新差異導致衝突，檔案無法push上去<br>
-            <a href="https://zlargon.gitbooks.io/git-tutorial/content/file/rename.html" target="_blank">
-                Git指令：git pull --rebase
-            </a><br>
+        <div class="JS30">
+            <div class="JS30-1">
+                <div class="keys">
+                    <div data-key="65" class="key">
+                    <kbd>A</kbd>
+                    <span class="sound">clap</span>
+                    </div>
+                    <div data-key="83" class="key">
+                    <kbd>S</kbd>
+                    <span class="sound">hihat</span>
+                    </div>
+                    <div data-key="68" class="key">
+                    <kbd>D</kbd>
+                    <span class="sound">kick</span>
+                    </div>
+                    <div data-key="70" class="key">
+                    <kbd>F</kbd>
+                    <span class="sound">openhat</span>
+                    </div>
+                    <div data-key="71" class="key">
+                    <kbd>G</kbd>
+                    <span class="sound">boom</span>
+                    </div>
+                    <div data-key="72" class="key">
+                    <kbd>H</kbd>
+                    <span class="sound">ride</span>
+                    </div>
+                    <div data-key="74" class="key">
+                    <kbd>J</kbd>
+                    <span class="sound">snare</span>
+                    </div>
+                    <div data-key="75" class="key">
+                    <kbd>K</kbd>
+                    <span class="sound">tom</span>
+                    </div>
+                    <div data-key="76" class="key">
+                    <kbd>L</kbd>
+                    <span class="sound">tink</span>
+                    </div>
+                </div>
+                
+                <audio data-key="65" src="./ref/JS30-1/sounds/clap.wav"></audio>
+                <audio data-key="83" src="./ref/JS30-1/sounds/hihat.wav"></audio>
+                <audio data-key="68" src="./ref/JS30-1/sounds/kick.wav"></audio>
+                <audio data-key="70" src="./ref/JS30-1/sounds/openhat.wav"></audio>
+                <audio data-key="71" src="./ref/JS30-1/sounds/boom.wav"></audio>
+                <audio data-key="72" src="./ref/JS30-1/sounds/ride.wav"></audio>
+                <audio data-key="74" src="./ref/JS30-1/sounds/snare.wav"></audio>
+                <audio data-key="75" src="./ref/JS30-1/sounds/tom.wav"></audio>
+                <audio data-key="76" src="./ref/JS30-1/sounds/tink.wav"></audio>
+            </div>
         </div>
     </div>
 
