@@ -41,6 +41,7 @@ body{
 }
 
 .show{
+    width: 100%;
     display: block;
 }
 
@@ -91,7 +92,7 @@ body{
 /* JS30 */
 .JS30{
     width: 100%;
-    display: block;
+    display: none;
 }
 
 /* JS30-1 */
@@ -121,7 +122,7 @@ body{
     background: rgba(0,0,0,0.2);
     text-shadow: 0 0 0.5rem black;
   
-    transition: all 0.07s ease;
+    transition: all 1.07s ease;
   }
   
   .playing {

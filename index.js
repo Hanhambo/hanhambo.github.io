@@ -1,17 +1,24 @@
 // Change Block
-let diary = document.querySelector(".diary");
-let JS30 = document.querySelector(".JS30"); 
+let diary, JS30;
+
+document.addEventListener("DOMContentLoaded", function(){
+  diary = document.querySelector(".diary");
+  JS30 = document.querySelector(".JS30");
+});
 
 function showDiary(){
-    diary.className="show";
-    JS30.className="hide";
+    diary.classList.add("diary");
+    diary.classList.remove("hide");
+    JS30.classList.add("hide");
+    JS30.classList.remove("JS30");
 }
 
 function showJS30(){
-    diary.className="hide";
-    JS30.className="show";
+    diary.classList.add("hide");
+    diary.classList.remove("diary");
+    JS30.classList.add("show");
+    JS30.classList.remove("hide");
 }
-
 
 // JS30-1
 function playSound(e){
@@ -38,16 +45,12 @@ function playSound(e){
   }
 
   // 鍵盤離手之後動畫狀態需解除
-  function removeTransition(e){
-    console.log(e);
-    if(e.propertyName !== "transform"){
-      return;
-    }else{
-      // console.log(e.propertyName);
-      // console.log(this);
-      this.classList.remove("playing");
+  function removeTransition(e) {
+    if (e.propertyName === 'transform') {
+        // console.log(e.propertyName);
+        e.target.classList.remove('playing');
     }
-  }
+}
 
   let keys = document.querySelectorAll(".key");
   // console.log(keys);
