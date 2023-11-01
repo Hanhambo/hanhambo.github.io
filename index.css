@@ -105,6 +105,7 @@ body{
 .keys {
     display: flex;
     flex: 1;
+    flex-wrap: wrap;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
