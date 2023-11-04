@@ -13,7 +13,7 @@
       practice.classList.remove("practice");
   }
 
-  function showJS30(){
+  function showPractice(){
       diary.classList.add("hide");
       diary.classList.remove("diary");
       practice.classList.add("show");
